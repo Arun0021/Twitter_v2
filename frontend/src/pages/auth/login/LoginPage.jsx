@@ -10,8 +10,8 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const LoginPage = () => {
 	const [formData, setFormData] = useState({
-		username: "",
-		password: "",
+		username: "guest",
+		password: "guest1",
 	});
 	const queryClient = useQueryClient();
 
@@ -69,7 +69,7 @@ const LoginPage = () => {
 						<input
 							type='text'
 							className='grow'
-							placeholder='username'
+							placeholder='username - guest'
 							name='username'
 							onChange={handleInputChange}
 							value={formData.username}
@@ -81,7 +81,7 @@ const LoginPage = () => {
 						<input
 							type='password'
 							className='grow'
-							placeholder='Password'
+							placeholder='Password - guest1'
 							name='password'
 							onChange={handleInputChange}
 							value={formData.password}
